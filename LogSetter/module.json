@@ -1,0 +1,14 @@
+{
+    "id": "{C4E5FD62-B7D1-453D-1A9D-CC21592702B6}",
+    "name": "LogSetter",
+    "type": 3,
+    "vendor": "J.H. Artworks",
+    "aliases":
+    [
+    ],
+    "url": "https://jh-artworks.com",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VTLS"
+}

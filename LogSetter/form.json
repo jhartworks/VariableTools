@@ -1,0 +1,16 @@
+{
+    "elements":
+    [
+        { "type": "SelectCategory", "name": "PropertyCategoryID", "caption": "Target" },
+        { "type": "SelectInstance", "name": "PropertyArchiveID", "caption": "Archiver" }
+    ],
+    "actions":
+    [
+
+        { "type": "Button", "label": "Set Logging", "onClick": "VTLS_setLogging($id);" }
+    ],
+    "status":
+    [
+
+    ]
+}
