@@ -1,0 +1,19 @@
+{
+    "elements":
+    [
+        { "type": "SelectCategory", "name": "PropertyCategoryID", "caption": "Target" },
+        { "type": "SelectInstance", "name": "PropertyGatewayID", "caption": "Gateway" },
+        { "type": "SelectMedia", "name": "PropertyMediaID", "caption": "CSV" },
+        { "type": "NumberSpinner", "name": "PropertyObjectSortOffset", "caption": "Sort-Offset" }
+
+    ],
+    "actions":
+    [
+
+        { "type": "Button", "label": "Create", "onClick": "VTMC_createModobjects($id);" }
+    ],
+    "status":
+    [
+
+    ]
+}

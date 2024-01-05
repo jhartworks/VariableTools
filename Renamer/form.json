@@ -1,0 +1,15 @@
+{
+    "elements":
+    [
+        { "type": "SelectCategory", "name": "PropertyCategoryID", "caption": "Target" }
+    ],
+    "actions":
+    [
+
+        { "type": "Button", "label": "Rename", "onClick": "VTRN_rename($id);" }
+    ],
+    "status":
+    [
+
+    ]
+}

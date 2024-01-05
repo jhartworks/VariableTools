@@ -1,0 +1,14 @@
+{
+    "id": "{C3286C5E-8AAB-15C8-6662-13CE28C0C85C}",
+    "name": "ModCreator",
+    "type": 3,
+    "vendor": "J.H. Artworks",
+    "aliases":
+    [
+    ],
+    "url": "https://jh-artworks.com",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VTMC"
+}

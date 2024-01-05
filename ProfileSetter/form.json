@@ -1,0 +1,19 @@
+{
+    "elements":
+    [
+        { "type": "SelectCategory", "name": "PropertyCategoryID", "caption": "Target" },
+        { "type": "SelectProfile", "name": "PropertyProfileNameBool", "caption": "Profil - Bool" , "profileType": 0},
+        { "type": "SelectProfile", "name": "PropertyProfileNameInt", "caption": "Profil - Integer" , "profileType": 1},
+        { "type": "SelectProfile", "name": "PropertyProfileNameFloat", "caption": "Profil - Float" , "profileType": 2},
+        { "type": "SelectProfile", "name": "PropertyProfileNameString", "caption": "Profil - String" , "profileType": 3}
+    ],
+    "actions":
+    [
+
+        { "type": "Button", "label": "Set selected Profiles", "onClick": "VTPS_setProfile($id);" }
+    ],
+    "status":
+    [
+
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "id": "{97873A1E-70E1-9AB9-0CA1-812C762E68FC}",
+    "name": "Renamer",
+    "type": 3,
+    "vendor": "J.H. Artworks",
+    "aliases":
+    [
+    ],
+    "url": "https://jh-artworks.com",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VTRN"
+}

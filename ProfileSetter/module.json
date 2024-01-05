@@ -1,0 +1,14 @@
+{
+    "id": "{74DEF544-0497-69C8-9802-00F641E279D9}",
+    "name": "ProfileSetter",
+    "type": 3,
+    "vendor": "J.H. Artworks",
+    "aliases":
+    [
+    ],
+    "url": "https://jh-artworks.com",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VTPS"
+}
