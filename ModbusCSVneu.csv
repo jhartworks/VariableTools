@@ -1,0 +1,15 @@
+﻿Name;Adress Read;FC Read;Adress Write;FC Write;Datatype (0=Bit, 1=Byte, 2=Word, 3=DWord, 4=ShortInt, 5=SmallInt, 6=Integer, 7=Real);Factor;Byteorder
+dwColorRgb1_Wohn;14574;3;14574;16;3;0.0;0
+dwColorRgb2_Wohn;14576;3;14576;16;3;0.1;0
+rFadetimeRgb1_Wohn;14582;3;14582;16;7;0.0;0
+dwColorRgb1_Ess;14604;3;14604;16;3;0.0;0
+dwColorRgb2_Ess;14606;3;14606;16;3;0.0;0
+rFadetimeRgb1_Ess;14612;3;14612;16;7;0.0;0
+xEnFadeRgb1_Ess;14729;1;14729;5;0;0.0;0
+xEnFadeRgb1_Wohn;14724;3;14724;16;2;0.0;0
+rFadetimeRgb1_Koch;14757;3;14757;16;7;0.0;0
+bWhite5_Ess;14706;3;14706;16;2;0.0;0
+bWhite6_Ess;14707;3;14707;16;2;0.0;0
+xEnFadeRgb1_Koch;14744;3;14744;16;2;0.0;0
+bWhite7_Wohn;14796;3;14796;16;2;0.0;0
+bWhite8_Wohn;14797;3;14797;16;2;0.0;0
