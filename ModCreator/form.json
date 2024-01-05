@@ -1,0 +1,17 @@
+{
+    "elements":
+    [
+        { "type": "SelectCategory", "name": "PropertyCategoryID", "caption": "Target" },
+        { "type": "SelectInstance", "name": "PropertyGatewayID", "caption": "Gateway" },
+        { "type": "SelectMedia", "name": "PropertyMediaID", "caption": "Media / CSV" }
+    ],
+    "actions":
+    [
+
+        { "type": "Button", "label": "Create", "onClick": "VTMC_createObjects($id);" }
+    ],
+    "status":
+    [
+
+    ]
+}
