@@ -1,0 +1,20 @@
+{
+    "elements":
+    [
+
+        { "type": "SelectInstance", "name": "VisuId", "caption": "Web Visu" },
+        { "type": "SelectVariable", "name": "ValueId01", "validVariableTypes": [0],"caption": "Überwachter Wert 1" },
+        { "type": "SelectVariable", "name": "ValueId02", "validVariableTypes": [0],"caption": "Überwachter Wert 2" },
+        { "type": "SelectVariable", "name": "ValueId03", "validVariableTypes": [0],"caption": "Überwachter Wert 3" },
+        { "type": "SelectVariable", "name": "ValueId04", "validVariableTypes": [0],"caption": "Überwachter Wert 4" }
+        
+    ],
+    "actions":
+    [
+
+    ],
+    "status":
+    [
+
+    ]
+}

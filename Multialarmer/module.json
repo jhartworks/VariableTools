@@ -1,0 +1,14 @@
+{
+    "id": "{B702BA08-68ED-A0F6-BD98-857B4B302B63}",
+    "name": "Multialarmer",
+    "type": 3,
+    "vendor": "J.H. Artworks",
+    "aliases":
+    [
+    ],
+    "url": "https://jh-artworks.com",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VTMA"
+}
