@@ -1,0 +1,16 @@
+{
+    "elements":
+    [
+
+        { "type": "SelectInstance", "name": "VisuId", "caption": "Web Visu" },
+        { "type": "SelectVariable", "name": "ValueId", "validVariableTypes": [2],"caption": "Überwachter Wert" }
+    ],
+    "actions":
+    [
+
+    ],
+    "status":
+    [
+
+    ]
+}

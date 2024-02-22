@@ -1,0 +1,14 @@
+{
+    "id": "{DB82A921-58A5-A363-01E4-C5672ECFC150}",
+    "name": "MinMax",
+    "type": 3,
+    "vendor": "J.H. Artworks",
+    "aliases":
+    [
+    ],
+    "url": "https://jh-artworks.com",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VTMM"
+}
