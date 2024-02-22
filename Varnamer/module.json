@@ -1,0 +1,14 @@
+{
+    "id": "{3E5C6478-498E-0E1A-2EF3-E584A38ADBAB}",
+    "name": "Varnamer",
+    "type": 3,
+    "vendor": "J.H. Artworks",
+    "aliases":
+    [
+    ],
+    "url": "https://jh-artworks.com",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VTVN"
+}

@@ -1,0 +1,20 @@
+{
+    "elements":
+    [
+
+
+        { "type": "SelectVariable", "name": "IdVariable01", "caption": "ID Variable 1" },
+        { "type": "SelectVariable", "name": "IdVariable02", "caption": "ID Variable 2" },
+        { "type": "SelectVariable", "name": "IdVariable03", "caption": "ID Variable 3" },
+        { "type": "SelectVariable", "name": "IdVariable04", "caption": "ID Variable 4" }
+
+    ],
+    "actions":
+    [
+
+    ],
+    "status":
+    [
+
+    ]
+}
