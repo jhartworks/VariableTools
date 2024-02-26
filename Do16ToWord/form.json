@@ -1,0 +1,17 @@
+{
+    "elements":
+    [
+
+
+        { "type": "SelectVariable", "name": "IdVariable", "caption": "ID Variable" }
+
+    ],
+    "actions":
+    [
+
+    ],
+    "status":
+    [
+
+    ]
+}

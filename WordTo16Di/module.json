@@ -1,0 +1,14 @@
+{
+    "id": "{C5BCEBA7-A3E5-E246-7D45-979148112439}",
+    "name": "WordTo16Di",
+    "type": 3,
+    "vendor": "J.H. Artworks",
+    "aliases":
+    [
+    ],
+    "url": "https://jh-artworks.com",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VTWD"
+}

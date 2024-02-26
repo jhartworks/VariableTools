@@ -1,0 +1,14 @@
+{
+    "id": "{2E62C98E-A730-4A74-E8FB-5A1D95F12446}",
+    "name": "Do16ToWord",
+    "type": 3,
+    "vendor": "J.H. Artworks",
+    "aliases":
+    [
+    ],
+    "url": "https://jh-artworks.com",
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "VTDW"
+}
