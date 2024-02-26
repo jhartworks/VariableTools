@@ -7,6 +7,7 @@
     ],
     "actions":
     [
+        { "type": "Button", "label": "Set Init Values", "onClick": "VTMM_setInitValues($id);" }
 
     ],
     "status":

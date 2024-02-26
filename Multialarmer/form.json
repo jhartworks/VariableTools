@@ -11,6 +11,7 @@
     ],
     "actions":
     [
+        { "type": "Button", "label": "Set Init Values", "onClick": "VTMA_setInitValues($id);" }
 
     ],
     "status":

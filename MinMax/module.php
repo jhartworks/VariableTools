@@ -14,13 +14,13 @@ class MinMax extends IPSModule {
 
         SetValue($this->RegisterVariableFloat("ActualValue", "Aktueller Wert","",0),123.4);
 
-        SetValue($this->RegisterVariableFloat("MinValue", "Minimalwert","LimitValue",10),20);
+        $this->RegisterVariableFloat("MinValue", "Minimalwert","LimitValue",10);
         $this->EnableAction("MinValue");
         SetValue($this->RegisterVariableBoolean("MinValueEn", "Minimalwert auswerten?","LimitEn",20),true);
         $this->EnableAction("MinValueEn");
         $this->RegisterVariableBoolean("IsMinValue", "Minimalwert","~Alert",30);
 
-        SetValue($this->RegisterVariableFloat("MaxValue", "Maximalwert","LimitValue",50),70);
+        $this->RegisterVariableFloat("MaxValue", "Maximalwert","LimitValue",50);
         $this->EnableAction("MaxValue");
         SetValue($this->RegisterVariableBoolean("MaxValueEn", "Maximalwert auswerten?","LimitEn",60),true);
         $this->EnableAction("MaxValueEn");
@@ -169,7 +169,14 @@ class MinMax extends IPSModule {
             return false;
         }
     }
+    public function setInitValues(){
 
+        SetValue($this->GetIDForIdent("NotifyTitel"),"Störung!");
+        SetValue($this->GetIDForIdent("NotifyTextMin"),"Grenzwert unterschritten");
+        SetValue($this->GetIDForIdent("NotifyTextMax"),"Grenzwert überschritten");
+        SetValue($this->GetIDForIdent("Hysterese"),1);
+
+    }
 }
 
 ?>

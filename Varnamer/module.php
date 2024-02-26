@@ -14,18 +14,14 @@ class Varnamer extends IPSModule {
 
 
 
-        SetValue($this->RegisterVariableString("Name01", "Name Variable 1","~TextBox",10),"Variable 1");
+        $this->RegisterVariableString("Name01", "Name Variable 1","~TextBox",10);
         $this->EnableAction("Name01");
-        SetValue($this->RegisterVariableString("Name02", "Name Variable 2","~TextBox",10),"Variable 2");
+        $this->RegisterVariableString("Name02", "Name Variable 2","~TextBox",20);
         $this->EnableAction("Name02");
-        SetValue($this->RegisterVariableString("Name03", "Name Variable 3","~TextBox",10),"Variable 3");
+        $this->RegisterVariableString("Name03", "Name Variable 3","~TextBox",30);
         $this->EnableAction("Name03");
-        SetValue($this->RegisterVariableString("Name04", "Name Variable 4","~TextBox",10),"Variable 4");
+        $this->RegisterVariableString("Name04", "Name Variable 4","~TextBox",40);
         $this->EnableAction("Name04");
-
-
-
-
 
     }
 
@@ -33,6 +29,8 @@ class Varnamer extends IPSModule {
     public function ApplyChanges() {
         // Diese Zeile nicht löschen
         parent::ApplyChanges();
+
+        $this->getInitValues();
 
     }
     public function RequestAction($Ident, $Value) {
@@ -67,6 +65,19 @@ class Varnamer extends IPSModule {
         if ($Idvalue04 > 0){
             IPS_SetName($Idvalue04, $Name04);
         }
+
+    }
+
+    public function getInitValues(){
+        $Idvalue01 = $this->ReadPropertyInteger("IdVariable01");
+        $Idvalue02 = $this->ReadPropertyInteger("IdVariable02");
+        $Idvalue03 = $this->ReadPropertyInteger("IdVariable03");
+        $Idvalue04 = $this->ReadPropertyInteger("IdVariable04");
+
+        SetValue($this->GetIDForIdent("Name01"),IPS_GetName($Idvalue01));
+        SetValue($this->GetIDForIdent("Name02"),IPS_GetName($Idvalue01));
+        SetValue($this->GetIDForIdent("Name03"),IPS_GetName($Idvalue01));
+        SetValue($this->GetIDForIdent("Name04"),IPS_GetName($Idvalue01));
 
     }
 

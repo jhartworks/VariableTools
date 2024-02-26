@@ -14,13 +14,13 @@ class Multialarmer extends IPSModule {
         $this->RegisterPropertyInteger("ValueId03",0);
         $this->RegisterPropertyInteger("ValueId04",0);
 
-        SetValue($this->RegisterVariableBoolean("NotifyEn01", "Variable 01 Melden?","LimitEn",95),true);
+        $this->RegisterVariableBoolean("NotifyEn01", "Variable 01 Melden?","LimitEn",95);
         $this->EnableAction("NotifyEn01");
-        SetValue($this->RegisterVariableBoolean("NotifyEn02", "Variable 02 Melden?","LimitEn",115),true);
+        $this->RegisterVariableBoolean("NotifyEn02", "Variable 02 Melden?","LimitEn",115);
         $this->EnableAction("NotifyEn02");
-        SetValue($this->RegisterVariableBoolean("NotifyEn03", "Variable 03 Melden?","LimitEn",135),true);
+        $this->RegisterVariableBoolean("NotifyEn03", "Variable 03 Melden?","LimitEn",135);
         $this->EnableAction("NotifyEn03");
-        SetValue($this->RegisterVariableBoolean("NotifyEn04", "Variable 04 Melden?","LimitEn",155),true);
+        $this->RegisterVariableBoolean("NotifyEn04", "Variable 04 Melden?","LimitEn",155);
         $this->EnableAction("NotifyEn04");
 
         SetValue($this->RegisterVariableString("NotifyTitel01", "Titel der Benachrichtigung Var 01","~TextBox",100),"Störung!");
@@ -98,7 +98,7 @@ class Multialarmer extends IPSModule {
 
 
         $NotifyTitel01 = GetValue($this->GetIDForIdent("NotifyTitel01"));
-        $NotifyText01 = IPS_GetName($IdVariable01);//GetValue($this->GetIDForIdent("NotifyText01"));
+        $NotifyText01 = IPS_GetName($IdVariable01);//GetValue($this->GetIDForIdent("NotifyText01")); 	2.207.168.165/29
 
         $NotifyTitel02 = GetValue($this->GetIDForIdent("NotifyTitel02"));
         $NotifyText02 = IPS_GetName($IdVariable02);//GetValue($this->GetIDForIdent("NotifyText02"));
@@ -140,6 +140,17 @@ class Multialarmer extends IPSModule {
 
 
     }
+
+    public function setInitValues(){
+        SetValue($this->GetIDForIdent("NotifyTitel01"),"Störung!");
+
+        SetValue($this->GetIDForIdent("NotifyTitel02"),"Störung!");
+
+        SetValue($this->GetIDForIdent("NotifyTitel03"),"Störung!");
+
+        SetValue($this->GetIDForIdent("NotifyTitel04"),"Störung!");
+    }
+
     private function notify($trigid, $webfrontid, $targetid, $art, $smname, $ico){
 
         if (GetValueBoolean($trigid) == true && ($this->GetBuffer($smname) == "true"))  {
