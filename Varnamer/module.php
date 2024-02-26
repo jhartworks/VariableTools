@@ -75,9 +75,9 @@ class Varnamer extends IPSModule {
         $Idvalue04 = $this->ReadPropertyInteger("IdVariable04");
 
         SetValue($this->GetIDForIdent("Name01"),IPS_GetName($Idvalue01));
-        SetValue($this->GetIDForIdent("Name02"),IPS_GetName($Idvalue01));
-        SetValue($this->GetIDForIdent("Name03"),IPS_GetName($Idvalue01));
-        SetValue($this->GetIDForIdent("Name04"),IPS_GetName($Idvalue01));
+        SetValue($this->GetIDForIdent("Name02"),IPS_GetName($Idvalue02));
+        SetValue($this->GetIDForIdent("Name03"),IPS_GetName($Idvalue03));
+        SetValue($this->GetIDForIdent("Name04"),IPS_GetName($Idvalue04));
 
     }
 
