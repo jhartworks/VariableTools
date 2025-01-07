@@ -2,7 +2,9 @@
     "elements":
     [
 
-        { "type": "SelectInstance", "name": "VisuId", "caption": "Web Visu" },
+        { "type": "SelectInstance", "name": "VisuId", "caption": "Kachelvisu ID" },
+        { "type": "SelectInstance", "name": "MailerId", "caption": "Email SMTP ID" },
+        { "type": "ValidationTextBox", "name": "MailAddresses", "caption": "E-Mail Adresses (Commaseperated)" , "width": "40%"},
         { "type": "SelectVariable", "name": "ValueId01", "validVariableTypes": [0],"caption": "Überwachter Wert 1" },
         { "type": "SelectVariable", "name": "ValueId02", "validVariableTypes": [0],"caption": "Überwachter Wert 2" },
         { "type": "SelectVariable", "name": "ValueId03", "validVariableTypes": [0],"caption": "Überwachter Wert 3" },
@@ -11,7 +13,9 @@
     ],
     "actions":
     [
-        { "type": "Button", "label": "Set Init Values", "onClick": "VTMA_setInitValues($id);" }
+        { "type": "Button", "label": "Set Init Values", "onClick": "VTMA_setInitValues($id);" },
+        { "type": "Button", "label": "Send a Mail", "onClick": "VTMA_sendTestmail($id);" }
+
 
     ],
     "status":

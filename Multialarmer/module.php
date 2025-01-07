@@ -6,9 +6,11 @@ class Multialarmer extends IPSModule {
         // Diese Zeile nicht löschen.
         parent::Create();
  
-        $this->createLimitEnprofile();
 
         $this->RegisterPropertyInteger("VisuId",0);
+        $this->RegisterPropertyInteger("MailerId",0);
+        $this->RegisterPropertyString("MailAddresses","jh@se-inno.de, info@se-inno.de");
+
         $this->RegisterPropertyInteger("ValueId01",0);
         $this->RegisterPropertyInteger("ValueId02",0);
         $this->RegisterPropertyInteger("ValueId03",0);
@@ -63,14 +65,7 @@ class Multialarmer extends IPSModule {
     }
 
 
-    public function createLimitEnprofile(){
-        if(!IPS_VariableProfileExists ("LimitEn") ){
 
-            IPS_CreateVariableProfile("LimitEn", 0);
-            IPS_SetVariableProfileAssociation("LimitEn", true, "Ja", "", 0x00FF00);
-            IPS_SetVariableProfileAssociation("LimitEn", false, "Nein", "", 0xFFFF00);
-        }
-    }
     public function RequestAction($Ident, $Value) {
                 $varid = $this->GetIDForIdent($Ident);
                 SetValue($varid, $Value);
@@ -98,7 +93,7 @@ class Multialarmer extends IPSModule {
 
 
         $NotifyTitel01 = GetValue($this->GetIDForIdent("NotifyTitel01"));
-        $NotifyText01 = IPS_GetName($IdVariable01);//GetValue($this->GetIDForIdent("NotifyText01")); 	2.207.168.165/29
+        $NotifyText01 = IPS_GetName($IdVariable01);//GetValue($this->GetIDForIdent("NotifyText01"));
 
         $NotifyTitel02 = GetValue($this->GetIDForIdent("NotifyTitel02"));
         $NotifyText02 = IPS_GetName($IdVariable02);//GetValue($this->GetIDForIdent("NotifyText02"));
@@ -151,15 +146,47 @@ class Multialarmer extends IPSModule {
         SetValue($this->GetIDForIdent("NotifyTitel04"),"Störung!");
     }
 
+    public function sendTestmail(){
+        $art= "";
+        $smname = "";
+        $this->sendMail($art, $smname, true);
+    }
+
+    private function sendMail($art, $smname, $testmail){
+
+        $MailerId  = $this->ReadPropertyInteger("MailerId");
+        $MailAddresses  = $this->ReadPropertyString("MailAddresses");
+        $MailAddresses = str_replace(" ", "", $MailAddresses);
+        $MailAddresses = str_replace(";", ",", $MailAddresses);
+
+        $MailAddresses = explode(",",$MailAddresses);
+        //print_r($MailAddresses);
+        if ($testmail == true){
+            $art= "MAILSYSTEMTEST";
+            $smname = "It was just a Test to be ready for a real emergency ;-)";
+        }
+        if ($MailerId > 0){
+            foreach ($MailAddresses as $MailAddress){
+                SMTP_SendMailEx($MailerId, $MailAddress, "SE Inno Mailservice ".$art, $smname);
+            }
+        }
+
+
+    }
+
     private function notify($trigid, $webfrontid, $targetid, $art, $smname, $ico){
+
+        $MailerId  = $this->ReadPropertyInteger("MailerId");
+        $MailAddresses  = array($this->ReadPropertyString("MailAddresses"));
 
         if (GetValueBoolean($trigid) == true && ($this->GetBuffer($smname) == "true"))  {
             
-            $this->SetBuffer($smname, "false");   
+            $this->SetBuffer($smname, "false");  
 
             VISU_PostNotification($webfrontid, $art, $smname, $ico, $targetid);
-            
+            $this->sendMail($art, $smname, false);      
         }
+
         elseif (GetValueBoolean($trigid) == false) {
             $this->SetBuffer($smname, "true");
         }
